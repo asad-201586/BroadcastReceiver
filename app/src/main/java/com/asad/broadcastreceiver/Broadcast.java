@@ -21,5 +21,15 @@ public class Broadcast extends BroadcastReceiver {
                 Toast.makeText(context, "internet connection restored", Toast.LENGTH_SHORT).show();
             }
         }
+
+        else if (Intent.ACTION_POWER_CONNECTED.equals(intent.getAction()))
+        {
+            Toast.makeText(context, "your phone is charging..", Toast.LENGTH_SHORT).show();
+        }
+
+        else if (Intent.ACTION_POWER_DISCONNECTED.equals(intent.getAction()))
+        {
+            Toast.makeText(context, "charger removed", Toast.LENGTH_SHORT).show();
+        }
     }
 }
